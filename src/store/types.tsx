@@ -19,4 +19,7 @@ export interface State {
 export interface CurrencyInputProps {
   selectedCurrency: string;
   onChangeCurrency: any;
+  inputName: string;
+  amount: number;
+  onChangeAmount: any;
 }
