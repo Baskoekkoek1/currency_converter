@@ -11,6 +11,36 @@ const initialState = {
 
 export default function reducer(state = initialState, action: any) {
   switch (action.type) {
+    case "CURRENCY_A_CHANGED": {
+      return {
+        ...state,
+        currencyA: action.payload,
+      };
+    }
+    case "CURRENCY_B_CHANGED": {
+      return {
+        ...state,
+        currencyB: action.payload,
+      };
+    }
+    case "CURRENCY_C_CHANGED": {
+      return {
+        ...state,
+        currencyC: action.payload,
+      };
+    }
+    case "CURRENCY_D_CHANGED": {
+      return {
+        ...state,
+        currencyD: action.payload,
+      };
+    }
+    case "CURRENCY_E_CHANGED": {
+      return {
+        ...state,
+        currencyE: action.payload,
+      };
+    }
     default:
       return state;
   }
