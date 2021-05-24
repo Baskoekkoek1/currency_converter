@@ -19,7 +19,7 @@ export default function CurrencyInput(props: CurrencyInputProps) {
       <input
         type="number"
         name={inputName}
-        value={amount}
+        value={amount ? amount : 0}
         onChange={onChangeAmount}
       ></input>
       <select value={selectedCurrency} onChange={onChangeCurrency}>
