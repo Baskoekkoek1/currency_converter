@@ -46,3 +46,10 @@ export const amountInInput = (inputChanged: string) => {
     payload: inputChanged,
   };
 };
+
+export const pickedDate = (newDate: string) => {
+  return {
+    type: "DATE_PICKED",
+    payload: newDate,
+  };
+};

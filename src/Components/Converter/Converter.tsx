@@ -21,6 +21,7 @@ import {
 import { fetchRates } from "../../store/rates/actions";
 import { selectAllRates } from "../../store/rates/selectors";
 import CurrencyInput from "../CurrencyInput/CurrencyInput";
+import DatePicker from "../DatePicker/DatePicker";
 
 export default function Converter() {
   const dispatch = useDispatch();
@@ -124,6 +125,7 @@ export default function Converter() {
         amount={amountE}
         onChangeAmount={handleAmountChange}
       />
+      <DatePicker />
     </div>
   );
 }

@@ -53,6 +53,12 @@ export default function reducer(state = initialState, action: any) {
         amountChangedInInput: action.payload,
       };
     }
+    case "DATE_PICKED": {
+      return {
+        ...state,
+        pickedDate: action.payload,
+      };
+    }
     default:
       return state;
   }
