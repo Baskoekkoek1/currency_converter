@@ -1,6 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  currencyAChanged,
+  currencyBChanged,
+  currencyCChanged,
+  currencyDChanged,
+  currencyEChanged,
+} from "../../store/converter/actions";
+import {
   selectCurrencyA,
   selectCurrencyB,
   selectCurrencyC,
@@ -25,11 +32,36 @@ export default function Converter() {
   return (
     <div>
       <h2>Converter</h2>
-      <CurrencyInput selectedCurrency={currencyA} />
-      <CurrencyInput selectedCurrency={currencyB} />
-      <CurrencyInput selectedCurrency={currencyC} />
-      <CurrencyInput selectedCurrency={currencyD} />
-      <CurrencyInput selectedCurrency={currencyE} />
+      <CurrencyInput
+        selectedCurrency={currencyA}
+        onChangeCurrency={(e: React.ChangeEvent<HTMLInputElement>) =>
+          dispatch(currencyAChanged(e.target.value))
+        }
+      />
+      <CurrencyInput
+        selectedCurrency={currencyB}
+        onChangeCurrency={(e: React.ChangeEvent<HTMLInputElement>) =>
+          dispatch(currencyBChanged(e.target.value))
+        }
+      />
+      <CurrencyInput
+        selectedCurrency={currencyC}
+        onChangeCurrency={(e: React.ChangeEvent<HTMLInputElement>) =>
+          dispatch(currencyCChanged(e.target.value))
+        }
+      />
+      <CurrencyInput
+        selectedCurrency={currencyD}
+        onChangeCurrency={(e: React.ChangeEvent<HTMLInputElement>) =>
+          dispatch(currencyDChanged(e.target.value))
+        }
+      />
+      <CurrencyInput
+        selectedCurrency={currencyE}
+        onChangeCurrency={(e: React.ChangeEvent<HTMLInputElement>) =>
+          dispatch(currencyEChanged(e.target.value))
+        }
+      />
     </div>
   );
 }
