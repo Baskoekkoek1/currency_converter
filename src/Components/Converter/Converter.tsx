@@ -78,6 +78,7 @@ export default function Converter() {
   useEffect(() => {
     dispatch(fetchRates("2020-05-24"));
   }, [dispatch]);
+
   return (
     <div id="converter">
       <CurrencyInput
