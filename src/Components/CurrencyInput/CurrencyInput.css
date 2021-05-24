@@ -1,0 +1,12 @@
+.input {
+  height: 5rem;
+  font-size: larger;
+}
+
+.currencyPicker {
+  height: 5rem;
+  width: 7rem;
+  font-size: larger;
+  background-color: #0abf53;
+  color: white;
+}

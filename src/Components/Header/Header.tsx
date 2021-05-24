@@ -1,9 +1,11 @@
 import React from "react";
+import "./Header.css";
 
 export default function Header() {
   return (
-    <div>
-      <h1>Header</h1>
+    <div id="header">
+      <h1>Bas Koekkoek</h1>
+      <h2>Currency Converter</h2>
     </div>
   );
 }

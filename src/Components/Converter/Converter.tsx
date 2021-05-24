@@ -22,6 +22,7 @@ import { fetchRates } from "../../store/rates/actions";
 import { selectAllRates } from "../../store/rates/selectors";
 import CurrencyInput from "../CurrencyInput/CurrencyInput";
 import DatePicker from "../DatePicker/DatePicker";
+import "./Converter.css";
 
 export default function Converter() {
   const dispatch = useDispatch();
@@ -78,8 +79,7 @@ export default function Converter() {
     dispatch(fetchRates("2020-05-24"));
   }, [dispatch]);
   return (
-    <div>
-      <h2>Converter</h2>
+    <div id="converter">
       <CurrencyInput
         selectedCurrency={currencyA}
         inputName="A"

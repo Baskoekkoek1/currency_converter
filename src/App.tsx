@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
 import Converter from "./Components/Converter/Converter";
+import Header from "./Components/Header/Header";
 
 function App() {
   return (
     <div className="App">
-      <h1>Bas Koekkoek</h1>
+      <Header />
       <Converter />
     </div>
   );

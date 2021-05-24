@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { pickedDate } from "../../store/converter/actions";
 import { fetchRates } from "../../store/rates/actions";
+import "./DatePicker.css";
 
 export default function DatePicker() {
   const today = new Date();
@@ -22,6 +23,7 @@ export default function DatePicker() {
     <div>
       <input
         type="date"
+        id="datePicker"
         value={date}
         onChange={(e) => {
           setDate(e.target.value);

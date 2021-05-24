@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { selectAllRates } from "../../store/rates/selectors";
 import { CurrencyInputProps } from "../../store/types";
+import "./CurrencyInput.css";
 
 export default function CurrencyInput(props: CurrencyInputProps) {
   const {
@@ -21,8 +22,13 @@ export default function CurrencyInput(props: CurrencyInputProps) {
         name={inputName}
         value={amount ? amount : 0}
         onChange={onChangeAmount}
+        className="input"
       ></input>
-      <select value={selectedCurrency} onChange={onChangeCurrency}>
+      <select
+        value={selectedCurrency}
+        onChange={onChangeCurrency}
+        className="currencyPicker"
+      >
         {currencyOptions?.map((currency: string) => {
           return (
             <option key={currency} value={currency}>
