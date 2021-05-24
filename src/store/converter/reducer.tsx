@@ -41,6 +41,18 @@ export default function reducer(state = initialState, action: any) {
         currencyE: action.payload,
       };
     }
+    case "AMOUNT_CHANGED": {
+      return {
+        ...state,
+        amount: action.payload,
+      };
+    }
+    case "CHANGE_INPUT": {
+      return {
+        ...state,
+        amountChangedInInput: action.payload,
+      };
+    }
     default:
       return state;
   }

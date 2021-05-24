@@ -4,13 +4,24 @@ import { selectAllRates } from "../../store/rates/selectors";
 import { CurrencyInputProps } from "../../store/types";
 
 export default function CurrencyInput(props: CurrencyInputProps) {
-  const { selectedCurrency, onChangeCurrency } = props;
+  const {
+    selectedCurrency,
+    onChangeCurrency,
+    inputName,
+    amount,
+    onChangeAmount,
+  } = props;
 
   const allRates = useSelector(selectAllRates);
   const currencyOptions: string[] = [...Object.keys(allRates)];
   return (
     <div>
-      <input type="number"></input>
+      <input
+        type="number"
+        name={inputName}
+        value={amount}
+        onChange={onChangeAmount}
+      ></input>
       <select value={selectedCurrency} onChange={onChangeCurrency}>
         {currencyOptions?.map((currency: string) => {
           return (

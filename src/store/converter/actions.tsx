@@ -32,3 +32,17 @@ export const currencyEChanged = (newCurrency: string) => {
     payload: newCurrency,
   };
 };
+
+export const changeAmount = (newAmount: number) => {
+  return {
+    type: "AMOUNT_CHANGED",
+    payload: newAmount,
+  };
+};
+
+export const amountInInput = (inputChanged: string) => {
+  return {
+    type: "CHANGE_INPUT",
+    payload: inputChanged,
+  };
+};
