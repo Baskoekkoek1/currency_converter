@@ -17,8 +17,6 @@ This app is a currency converter.
 - Ability to input the source amount
 - Conversion rates must be pulled from a third-party API. We recommend using https://ratesapi.io/, but other APIs may be used as well, however the actual conversion calculation must be performed by your application (also do not use any third-party libraries for it).
 
-## Nice-to-have features
-
 - Ability to perform multiple conversions at the same time
 - Option to select a different date for the conversion rate
 - Bidirectional conversion (user can input either source or target amount)
