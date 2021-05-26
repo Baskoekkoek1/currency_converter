@@ -1,5 +1,9 @@
 # Bas Koekkoek, Currency Converter
 
+## Note to reviewer
+
+For the state management in this project I have used Redux. The main reason for this was that I wanted to show my capabilities in this technology, but I am aware that the use of Redux is not necessary. The state management could, in a relatively simple app like this, have been done in a local state using React Hooks.
+
 ## What is this app about?
 
 This app is a currency converter.

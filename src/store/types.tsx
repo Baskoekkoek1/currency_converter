@@ -23,3 +23,11 @@ export interface CurrencyInputProps {
   amount: number;
   onChangeAmount: any;
 }
+
+export interface FilledAmounts {
+  A: number;
+  B: number;
+  C: number;
+  D: number;
+  E: number;
+}
